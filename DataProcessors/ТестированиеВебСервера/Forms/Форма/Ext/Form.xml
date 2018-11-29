@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаВыполнитьЗапрос" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнить запрос</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаВыполнитьЗапросРасширеннаяПодсказка" id="2"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ОбъектТестирования" id="15">
+			<DataPath>ОбъектТестирования</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Все</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Только HTTP</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Только OData</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ОбъектТестированияКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ОбъектТестированияРасширеннаяПодсказка" id="17"/>
+		</RadioButtonField>
+		<InputField name="АдресHTTP" id="3">
+			<DataPath>Объект.АдресHTTP</DataPath>
+			<ContextMenu name="АдресHTTPКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="АдресHTTPРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<InputField name="АдресOData" id="6">
+			<DataPath>Объект.АдресOData</DataPath>
+			<ContextMenu name="АдресODataКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="АдресODataРасширеннаяПодсказка" id="8"/>
+		</InputField>
+		<InputField name="КоличествоПотоков" id="9">
+			<DataPath>Объект.КоличествоПотоков</DataPath>
+			<ContextMenu name="КоличествоПотоковКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КоличествоПотоковРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<InputField name="КоличествоОбращений" id="12">
+			<DataPath>Объект.КоличествоОбращений</DataPath>
+			<ContextMenu name="КоличествоОбращенийКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="КоличествоОбращенийРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<Table name="КоличествоОбъектовВВыборке" id="18">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КоличествоОбъектовВВыборке</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КоличествоОбъектовВВыборкеКонтекстноеМеню" id="19">
+				<Autofill>false</Autofill>
+			</ContextMenu>
+			<AutoCommandBar name="КоличествоОбъектовВВыборкеКоманднаяПанель" id="20">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="КоличествоОбъектовВВыборкеКоличествоОбъектовВыделитьВсе" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КоличествоОбъектовВыделитьВсе</CommandName>
+						<ExtendedTooltip name="КоличествоОбъектовВВыборкеКоличествоОбъектовВыделитьВсеРасширеннаяПодсказка" id="38"/>
+					</Button>
+					<Button name="КоличествоОбъектовВВыборкеКоличествоОбъектовСнятьВсе" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КоличествоОбъектовСнятьВсе</CommandName>
+						<ExtendedTooltip name="КоличествоОбъектовВВыборкеКоличествоОбъектовСнятьВсеРасширеннаяПодсказка" id="40"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КоличествоОбъектовВВыборкеРасширеннаяПодсказка" id="21"/>
+			<SearchStringAddition name="КоличествоОбъектовВВыборкеСтрокаПоиска" id="22">
+				<AdditionSource>
+					<Item>КоличествоОбъектовВВыборке</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КоличествоОбъектовВВыборкеСтрокаПоискаКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="КоличествоОбъектовВВыборкеСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КоличествоОбъектовВВыборкеСостояниеПросмотра" id="25">
+				<AdditionSource>
+					<Item>КоличествоОбъектовВВыборке</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КоличествоОбъектовВВыборкеСостояниеПросмотраКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="КоличествоОбъектовВВыборкеСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КоличествоОбъектовВВыборкеУправлениеПоиском" id="28">
+				<AdditionSource>
+					<Item>КоличествоОбъектовВВыборке</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КоличествоОбъектовВВыборкеУправлениеПоискомКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="КоличествоОбъектовВВыборкеУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="КоличествоОбъектовВВыборкеИспользование" id="31">
+					<DataPath>КоличествоОбъектовВВыборке.Использование</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КоличествоОбъектовВВыборкеИспользованиеКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КоличествоОбъектовВВыборкеИспользованиеРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<InputField name="КоличествоОбъектовВВыборкеКоличествоОбъектов" id="34">
+					<DataPath>КоличествоОбъектовВВыборке.КоличествоОбъектов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоличествоОбъектовВВыборкеКоличествоОбъектовКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КоличествоОбъектовВВыборкеКоличествоОбъектовРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТестированиеВебСервера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ОбъектТестирования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОбъектовВВыборке" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество объектов в выборке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Использование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоОбъектов" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество объектов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьЗапрос</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КоличествоОбъектовВыделитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КоличествоОбъектовВыделитьВсе</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КоличествоОбъектовСнятьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КоличествоОбъектовСнятьВсе</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
