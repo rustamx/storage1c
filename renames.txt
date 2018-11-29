@@ -3,6 +3,8 @@ Configuration.xml-->Configuration.xml
 Catalogs\Справочник1.xml-->Catalogs\Справочник1.xml
 Catalogs\Справочник2.xml-->Catalogs\Справочник2.xml
 Catalogs\Справочник3.xml-->Catalogs\Справочник3.xml
+Catalogs\Справочник1\Forms\ФормаЭлемента.xml-->Catalogs\Справочник1\Forms\ФормаЭлемента.xml
+Catalogs\Справочник1\Forms\ФормаЭлемента\Ext\Form.xml-->Catalogs\Справочник1\Forms\ФормаЭлемента\Ext\Form.xml
 CommonModules\ТестированиеВебСервера.xml-->CommonModules\ТестированиеВебСервера.xml
 CommonModules\ТестированиеВебСервера\Ext\Module.bsl-->CommonModules\ТестированиеВебСервера\Ext\Module.bsl
 DataProcessors\ВнешняяОбработка1.xml-->DataProcessors\ВнешняяОбработка1.xml
