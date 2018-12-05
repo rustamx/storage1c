@@ -9,5 +9,11 @@
 	//Вставить содержимое обработчика
 	//TEEEEEEEEEEEEE
 	//NEW TEST
+	//TEEEEEEEEEEEEE
+	//NEW TEST
+
+	//TEEEEEEEEEEEEE
+	//NEW TEST
+
 КонецПроцедуры
 
