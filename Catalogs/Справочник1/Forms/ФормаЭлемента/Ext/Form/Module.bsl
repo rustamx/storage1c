@@ -7,16 +7,7 @@
 &НаСервере
 Процедура ПриОткрытииНаСервере()
 	//Вставить содержимое обработчика
-	//TEEEEEEEEEEEEE
-	//NEW TEST
-	//TEEEEEEEEEEEEE
-	//NEW TEST
-
-	//TEEEEEEEEEEEEE
-	//NEW TEST
-	//TEE
-	//TEEEEEEEEEEEEE
-	//NEW TEST
+		//NEW TEST
 
 	//TEEEEEEEEEEEEE
 	//NEW TEST
